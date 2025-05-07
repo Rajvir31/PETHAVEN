@@ -1,3 +1,5 @@
+# Group 17 - Gary Gao, Kevin Du, Michael Primeau, Rajvir Parmar, Zein Jaradat	
+
 # PET HAVEN
 
 A virtual pet game built with JavaFX where you can adopt and care for digital pets. Features include feeding, playing, exercising, and monitoring your pet's vital stats. The game includes parental controls for managing playtime and content access.
