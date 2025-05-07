@@ -1,0 +1,133 @@
+.settings-background {
+    -fx-background-image: url("../images/menu/BackGround-settings.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.settings-title-label {
+    -fx-font-size: 30px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 20 0;
+}
+
+.settings-container-background {
+    -fx-background-color: rgba(245, 230, 211, 0.7);
+    -fx-background-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 4);
+    -fx-max-width: 400;
+    -fx-min-height: 300;
+}
+
+.settings-container {
+    -fx-padding: 20 30 20 30;
+}
+
+.settings-section-label {
+    -fx-font-size: 24px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.custom-slider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 10;
+}
+
+.custom-slider .slider-track {
+    -fx-fill: #e9e9eb;
+}
+
+.custom-slider .slider-progress-track {
+    -fx-fill: #34c759;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+.custom-slider .slider-thumb {
+    -fx-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+
+.custom-slider:hover .slider-thumb {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 3);
+    -fx-cursor: hand;
+}
+
+.custom-slider:pressed .slider-thumb {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 4);
+}
+
+.custom-slider:disabled {
+    -fx-opacity: 0.4;
+}
+
+.settings-separator {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-padding: 1;
+}
+
+.value-label {
+    -fx-font-size: 16px;
+    -fx-min-width: 40px;
+    -fx-pref-width: 40px;
+    -fx-text-fill: white;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+}
+
+.parental-status-label {
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.version-info {
+    -fx-alignment: center;
+    -fx-padding: 10 0 0 0;
+}
+
+.version-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+}
+
+.copyright-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: black;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.secondary-button {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8 16;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+}
+
+.secondary-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-cursor: hand;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.back-button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+}

@@ -1,0 +1,94 @@
+.main-menu-background {
+    -fx-background-image: url("../images/menu/BackGround.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.main-menu-title {
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-font-size: 80px;
+    -fx-text-fill: black;
+    -fx-padding: 20px 20px 200px 20px;
+}
+
+.main-menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-min-width: 80px;
+    -fx-min-height: 50px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: 900;
+}
+
+.custom-button:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #F5E6D3;
+}
+
+.dialog-overlay {
+    -fx-background-image: url("../images/menu/BackGround-settings.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.dialog-content {
+    -fx-background-color: rgba(245, 230, 211, 0.7);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 4);
+    -fx-max-width: 500;
+    -fx-max-height: 250;
+    -fx-background-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 4);
+}
+
+.dialog-title {
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.dialog-message {
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.dialog-button-confirm, .dialog-button-cancel {
+    -fx-min-width: 80px;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.dialog-button-confirm {
+    -fx-background-color: white;
+    -fx-text-fill: #38250e;
+    -fx-font-weight: bold;
+}
+
+.dialog-button-cancel {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-font-weight: bold;
+}
+
+.dialog-button-confirm:hover {
+    -fx-background-color: #F5E6D3;
+    -fx-text-fill: rgba(56, 37, 14, 0.5);
+}
+
+.dialog-button-cancel:hover {
+    -fx-background-color: rgba(245, 230, 211, 0.2);
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.example.components.CustomSlider?>
+<?import com.example.components.CustomToggle?>
+<?import com.example.components.CustomButton?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.controller.SettingsController"
+           styleClass="settings-background"
+           stylesheets="@../styles/settings.css">
+           
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 0 50 0 50;">
+        <!-- Title Section -->
+        <Label text="Settings" styleClass="settings-title-label"/>
+        
+        <!-- White Background Container -->
+        <StackPane styleClass="settings-container-background">
+            <!-- Settings Content -->
+            <VBox spacing="15" styleClass="settings-container">
+                <!-- Volume Control -->
+                <VBox spacing="8" alignment="CENTER">
+                    <Label text="Volume" styleClass="settings-section-label"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <CustomSlider fx:id="volumeSlider" prefWidth="300" styleClass="custom-slider"/>
+                        <Label fx:id="volumeLabel" styleClass="value-label"/>
+                    </HBox>
+                </VBox>
+                
+                <Separator styleClass="settings-separator"/>
+                
+                <!-- Parental Controls -->
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="Parental Controls" styleClass="settings-section-label"/>
+                    <Label fx:id="parentalStatusLabel" styleClass="parental-status-label"/>
+                    <StackPane>
+                        <CustomButton fx:id="parentalControlsButton" 
+                                     text="CREATE PROFILE" 
+                                     onAction="#goParent" 
+                                     styleClass="secondary-button"/>
+                        <CustomButton fx:id="configureButton" 
+                                     text="CONFIGURE" 
+                                     onAction="#goParent" 
+                                     styleClass="secondary-button"/>
+                    </StackPane>
+                </VBox>
+                
+                <Separator styleClass="settings-separator"/>
+                
+                <!-- Version Info -->
+                <VBox spacing="5" styleClass="version-info">
+                    <Label text="PET HAVEN Version 2.0" styleClass="version-label"/>
+                    <Label text="© 2024 Team17" styleClass="copyright-label"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+
+        <!-- Back Button -->
+        <CustomButton text="BACK" 
+                     onAction="#goBack"
+                     styleClass="back-button"/>
+    </VBox>
+    
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+</StackPane>

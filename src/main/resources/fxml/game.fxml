@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import com.example.components.StatBar?>
+<?import com.example.components.CustomButton?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.controller.GameController"
+      alignment="CENTER" spacing="20" styleClass="game-background"
+      stylesheets="@../styles/game.css">
+
+    <!-- Game Over Label -->
+    <Label fx:id="gameOverLabel" text="Game Over! Start a New Game or Load a Saved Game."
+           styleClass="game-over-label" visible="false" />
+
+    <!-- Main Content -->
+    <HBox spacing="20" alignment="CENTER">
+        <!-- Status Section -->
+        <VBox styleClass="status-section" spacing="15" minWidth="300">
+            <Label text="Pet Status" styleClass="status-title" />
+            
+            <StatBar fx:id="energyBar" labelText="ENERGY"/>
+            <StatBar fx:id="healthBar" labelText="HEALTH"/>
+            <StatBar fx:id="hungerBar" labelText="HUNGER"/>
+            <StatBar fx:id="happinessBar" labelText="HAPPINESS"/>
+        </VBox>
+
+        <!-- Pet Display -->
+        <StackPane styleClass="pet-container">
+            <ImageView fx:id="moleSprite"
+                      fitWidth="300"
+                      fitHeight="300"
+                      preserveRatio="true">
+                <image>
+                    <Image url="@../images/mole.png" />
+                </image>
+            </ImageView>
+        </StackPane>
+
+        <!-- Actions Section -->
+        <VBox styleClass="actions-section" spacing="15" alignment="CENTER">
+            <Label text="Actions" styleClass="status-title" />
+            <CustomButton fx:id="sleepButton" text="Sleep" onAction="#sleepPet" styleClass="action-button" />
+            <CustomButton fx:id="feedButton" text="Feed" onAction="#feedPet" styleClass="action-button" />
+            <CustomButton fx:id="playButton" text="Play" onAction="#playPet" styleClass="action-button" />
+            <CustomButton fx:id="giftButton" text="Give Gift" onAction="#giveGift" styleClass="action-button" />
+            <CustomButton fx:id="exerciseButton" text="Exercise" onAction="#exercisePet" styleClass="action-button" />
+            <CustomButton fx:id="vetButton" text="Take to Vet" onAction="#takeVet" styleClass="action-button" />
+            <CustomButton fx:id="inventoryButton" text="Inventory" onAction="#openInventory" styleClass="action-button" />
+        </VBox>
+    </HBox>
+
+    <!-- Bottom Controls -->
+    <HBox spacing="20" alignment="CENTER">
+        <CustomButton fx:id="backButton" text="Back" onAction="#goBack" styleClass="back-button" />
+        <CustomButton fx:id="saveButton" text="Save Game" onAction="#saveGame" styleClass="save-button" />
+        <CustomButton fx:id="playPauseButton" text="Pause" onAction="#togglePlayPause" styleClass="play-pause-button" />
+    </HBox>
+
+    <!-- Game Info -->
+    <HBox spacing="50" alignment="CENTER" styleClass="game-info">
+        <Label fx:id="playTimeLabel" text="Play Time: 00:00:00" />
+        <Label fx:id="scoreLabel" text="Score: 0" />
+    </HBox>
+    <StackPane fx:id="exitDialog" visible="false" styleClass="dialog-overlay">
+        <VBox styleClass="dialog-content" alignment="CENTER" spacing="20">
+            <Label text="Return to Main Menu?" styleClass="dialog-title"/>
+            <Label text="Any unsaved progress will be lost!" styleClass="dialog-message"/>
+            <HBox spacing="20" alignment="CENTER">
+                <CustomButton text="CONFIRM RETURN" onAction="#confirmBackToMain" styleClass="dialog-button-confirm"/>
+                <CustomButton text="CANCEL" onAction="#cancelExit" styleClass="dialog-button-cancel"/>
+            </HBox>
+        </VBox>
+    </StackPane>
+</VBox>

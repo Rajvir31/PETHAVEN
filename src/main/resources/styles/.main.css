@@ -1,0 +1,35 @@
+.root {
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-background-color: #f0f0f0;
+}
+
+.save-menu-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-min-width: 80px;
+    -fx-min-height: 30px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.custom-button:hover {
+    -fx-cursor: hand;
+}
+
+.custom-toggle {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.custom-toggle:selected .background {
+    -fx-fill: #34c759;
+}
+
+.custom-toggle .thumb {
+    -fx-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+} 
